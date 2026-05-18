@@ -1,0 +1,18 @@
+@charset "utf-8";
+body{
+  background-color:rgb(21, 20, 20);
+}
+p {
+    text-align: justify;
+}
+h1{
+  color: aliceblue;
+}
+p{
+ color: aliceblue;
+
+}
+li{
+ color: aliceblue;
+}
+

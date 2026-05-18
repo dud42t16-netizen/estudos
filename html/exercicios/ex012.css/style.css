@@ -1,0 +1,19 @@
+@charset "UTF-8";
+<style>
+        body{
+            font-size: 18px;
+
+        }
+        p {
+            text-align: justify;
+        }
+       h1 {
+        color: blue;
+
+        }
+       button {
+        text-align: right;
+
+        }
+        
+    </style>

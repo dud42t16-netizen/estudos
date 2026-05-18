@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex especial</title>
+    <style>
+        body {
+            background-color: rgb(200, 255, 255);
+            font-size: 18pt;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input {
+            width: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>sistema de multiplicação</h1>
+    <br>
+    <input type="number" name="txtn1" id="txtn1"> x
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <br>
+    <div id="res">resultado</div>
+    <script>
+        function multiplicar(){
+        var n1 = window.document.getElementById('txtn1')
+        var n2 = window.document.getElementById('txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number (n1.value)
+        var n2 = Number(n2.value)
+        var r = n1 * n2
+        res.innerText = `a multiplicação de ${n1} x ${n2} é = ${r}`
+        }
+    </script>
+    
+</body>
+</html>

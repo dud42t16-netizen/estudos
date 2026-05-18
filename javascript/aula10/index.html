@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 10</title>
+    <style>
+        div{
+            background-color: aqua;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>eventos dom</h1>
+
+    <div id="area" onclick="clicar()">
+        interaja
+    </div>
+    <p><a href="pag.html">proxima pag</a></p>
+    <script>
+        function clicar(){
+            var a = window.document.getElementById('area')
+            a.addEventListener('click',clicar)//n faz parte do codigo
+
+            a.innerText = 'clicou'//innertext mostra um texto
+        }
+
+    </script>
+    
+</body>
+</html>
