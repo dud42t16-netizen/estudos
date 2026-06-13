@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <form action="cadastro.php" method="post">
+            <fieldset>
+                <legend>login</legend>
+                <p>
+                    <label for="imail">e-mail</label>
+                    <input type="email" name="email" id="imail" required>
+                    <input type="password" name="senha" id="isenha" required>
+                </p>
+            </fieldset>
+        <p>
+            <input type="submit" value="enviar">
+        </p>
+        <p>
+            <input type="reset" value="limpar">
+        </p>
+        <p>
+            nivel de satisfaçã
+            <input type="range" name="sat" id="isat" required>
+        </p>
+        <p>seu estado?</p>
+        <p>
+            <label for="">estado</label>
+            <select name="est" id="iest">
+             <option value="iest" selected>escolha</option>
+             <optgroup>
+                <option value="rj">rio de janeiro</option>
+                <option value="sc">santa catarina</option>
+             </optgroup>
+             </select>
+        </p>
+   
+    </form>
+</body>
+</html>
