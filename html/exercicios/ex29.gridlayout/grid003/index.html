@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 003</title>
+    <style>
+        body {
+            background-color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        .container {
+            background-color: rgb(189, 224, 255);
+            height: 300px;
+
+            display: grid;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .caixa1 {
+            border: 1px dashed black;
+            background-color: rgb(218, 243, 243);
+            grid-row-start: 1;
+            grid-row-end:2;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+
+        .caixa2 {
+            border: 1px dashed black;
+            background-color: antiquewhite;
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        .caixa3 {
+            border: 1px dashed black;
+            background-color: antiquewhite;
+
+            grid-row-start: 2;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">propriedade de items</h1>
+    <br>
+    <div class="container">
+        <div class="caixa1">lorem 1</div>
+        <div class="caixa2">lorem 2</div>
+        <div class="caixa3">lorem 3</div>
+    </div>
+</body>
+</html>
