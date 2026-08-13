@@ -15,11 +15,11 @@
         <div>
             numero (entre 1 e 100):
             <input type="number" name="fnum" id="fnum">
-            <input type="button" value="adicionar">
+            <input type="button" value="adicionar" onclick = "Adicionar()">
             <br>
             <select name="flista" id="flista" size="6"></select>
             <br>
-            <input type="button" value="finalizar">
+            <input type="button" value="finalizar" onclick="finalizar()">
         </div>
         <div id="res">
         </div>
@@ -35,26 +35,43 @@
         let valores = []
 
         function isNumero(n) {
-            if (number(n) >= 1 && number(n) <= 100) {
+            if (Number(n) >= 1 && Number(n) <= 100) {
                 return true
             } else {
                 return false
             }
         }
 
-        function inLista(n){
-            if (l.indexof(number(n)) != -1) {
+        function inLista(n, l){
+            if (l.indexOf(Number(n)) != -1) {
                 return true
             } else {
                 return false
             }
         }
 
-        function adicionar() {
+        function Adicionar() {
             if (isNumero(num.value) && !inLista(num.value)) {
-
+                valores.push(Number(num.value))
+                let item = document.createElement('option')
+                item.text = `valor ${num.value} adicionado.`
+                lista.appendChild(item)
+                res.innerHTML = ''
             } else {
                 window.alert('valor invalido')
+            }
+            num.value = ''
+            num.focus()
+        }
+
+        function finalizar() {
+            if (valores.length == 0) {
+                window.alert('adicione valores antes de finalizar')
+            } else {
+                let tot = valores.length
+
+                res.innerHTML = ''
+                res.innerHTML += <p>ao todo temos ${tot} numeros cadastrados</p>
             }
         }
     </script>
