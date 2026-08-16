@@ -7,6 +7,7 @@
     <style>
         body {
             background-color: rgb(103, 164, 217);
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         main {
@@ -45,15 +46,22 @@
             x
             <input type="number" name="ip" id="ip2">
             <br>
-            <input type="button" value="somar" onclick="somar()">
+            <input type="button" value="multiplicar" onclick="multiplicar()">
+        </div>
+        <br>
+        <div id="res">
+            resultado:
         </div>
     </main>
     <script>
-        function somar() {
-           let n1 = document.getElementById(ip1);
-           let n2 = document.getElementById(ip2);
-           let res = n1 * n2;
-           inn
+        function multiplicar() {
+           var n1 = window.document.getElementById('ip1');
+           var n2 = window.document.querySelector('input#ip2');
+           var res = window.document.getElementById('res');
+           var n1 = Number(n1.value);
+           var n2 = Number(n2.value);
+           var m = n1 * n2;
+           res.innerText = `a multiplicação entre ${n1} e ${n2} é = ${m}`;
         }
     </script>
 </body>
