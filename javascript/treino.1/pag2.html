@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pag2</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        div {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>sistema de soma</h1>
+        <div id="d1">
+            <input type="number" name="n1" id="n1"> + 
+            <input type="number" name="n2" id="n2">
+            <input type="button" value="somar" onclick="somar()">
+        </div>
+        <div id="d2">
+            resultado:
+        </div>
+    </article>
+    <script>
+        function somar() {
+            const n1 = Number(document.getElementById('n1').value);
+            const n2 = Number(document.getElementById('n2').value);
+            const res = n1 + n2;
+
+            document.getElementById('d2').innerText =`a soma entre ${n1} e ${n2} é: ${res}`;
+        }
+    </script>
+</body>
+</html>
